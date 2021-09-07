@@ -37,6 +37,7 @@ if(mouse_event=="mousedown") {
     ctx.beginPath();
 ctx.strokeStyle= color;
 ctx.lineWidth=width_of_line;
+ ctx.arc(current_position_of_mouse_x, current_position_of_mouse_y, 50, 0)
 
 console.log("Last Position Of X&Y cordinates:");
 console.log("x="+lst_pst_x+"y="+lst_pst_y);
