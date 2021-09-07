@@ -7,6 +7,7 @@ var lst_pst_x,lst_pst_y;
 
 color= "black";
 width_of_line= 5;
+radius= 50;
 
 canvas.addEventListener("mousedown",ms_dwn);
 
@@ -14,6 +15,7 @@ function ms_dwn(e) {
     mouse_event="mousedown";
     color= document.getElementById("color").value;
     width_of_line= document.getElementById("width_of_line").value;
+    radius= document.getElementById("radius").value;
 }
 
 canvas.addEventListener("mouseup",ms_up);
@@ -37,7 +39,7 @@ if(mouse_event=="mousedown") {
     ctx.beginPath();
 ctx.strokeStyle= color;
 ctx.lineWidth=width_of_line;
- ctx.arc(current_position_of_mouse_x, current_position_of_mouse_y, 50, 0)
+ ctx.arc(current_position_of_mouse_x, current_position_of_mouse_y, 50, 0, 2 + Math.PI);
 
 console.log("Last Position Of X&Y cordinates:");
 console.log("x="+lst_pst_x+"y="+lst_pst_y);
